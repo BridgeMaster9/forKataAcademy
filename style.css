@@ -444,24 +444,39 @@ body {
 
 /*---------------------------SIDEBAR---------------------------*/
 .sidebar{
-  width: 320px;
-  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   background-color: #ffffff;
   top: 0;
   left: 0;
-  overflow-y: auto;
 }
 @media (min-width: 768px) {
   .sidebar{
     box-shadow: 30px 0 30px -10px #0E185033,
                 16px 0 15px -10px #454F7E05;
+    width: 320px;
   }
 }
 .sidebar__inner{
+  height: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-left: 24px;
   padding-right: 8px;
   padding-bottom: 32px;
+}
+
+.sidebar__inner::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .sidebar__header{
@@ -494,14 +509,7 @@ body {
   top: 11px;
   left: 11px;
 }
-.sidebar__menu{
-  margin-bottom: 32px;
-}
-@media (min-width: 768px) {
-  .sidebar__menu{
-    margin-bottom: 268px;
-  }
-}
+
 .sidebar__list{
   padding: 0;
   margin: 0;
