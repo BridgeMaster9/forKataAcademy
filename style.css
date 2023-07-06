@@ -36,8 +36,8 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: "TT lakes", "Times New Roman", "sans-serif";
-  background-color: #f8f8f8;
   color: #1b1c21;
+  background-color: #f8f8f8;
 }
 /*-------------------------------------------------HEADER-------------------------------------*/
 .header__inner {
@@ -47,8 +47,6 @@ body {
   padding: 0 16px;
   padding-right: 0;
   background-color: #ffffff;
-  margin-bottom: 24px;
-  border-bottom: 1px solid #d9fff5;
 }
 
 @media (min-width: 768px) {
@@ -207,15 +205,17 @@ body {
     display: block;
   }
 }
-.content {
-  background-color: #f8f8f8;
-  margin: 0;
-}
 
 /*-------------------------------------------------MAIN-------------------------------------*/
 /*---------------------------MAIN TITLE---------------------------*/
+
+.content {
+  border-top: 1px solid #d9fff5;
+}
 .content__title {
   display: flex;
+  padding-top: 24px;
+  
 }
 .content__title-text {
   display: flex;
@@ -373,7 +373,7 @@ body {
   margin: 0 16px 16px 16px;
 }
 @media (min-width: 768px) {
-  .aboutcompany__text {
+  .aboutcompany {
     margin-left: 8px;
   }
 }
@@ -409,22 +409,28 @@ body {
     display: block;
   }
 }
-.aboutcompany__btn {
+.next-button {
   display: flex;
   align-items: center;
   height: 24px;
-  font-size: 16px;
-  font-weight: medium;
-  letter-spacing: -0.2px;
+  padding: 0;
   cursor: pointer;
+  border: none;
+  background-color: #F8F8F8;
+  margin: 16px 0;
 }
-.aboutcompany__btn-icon {
+.next-button__icon {
   width: 24px;
   height: 24px;
   background-image: url(assets/images/arrow.svg);
-  border: none;
-  background-color: #f8f8f8;
   cursor: pointer;
+}
+.next-button__text{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: medium;
+  letter-spacing: -0.2px;
+  margin: 0;
 }
 
 .aboutcompany__image-img {
@@ -598,4 +604,128 @@ body {
 .language:active,
 .language:focus {
   color: #7e7e82;
+}
+
+
+/*---------------------------Brands---------------------------*/
+.content-block {
+  border-top: 1px solid #d9fff5;
+  padding-left: 16px;
+}
+@media (min-width: 768px) {
+  .content-block {
+    padding-left: 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .content-block {
+    padding-left: 32px;
+  }
+}
+.subtitles{
+  padding: 16px;
+  padding-left: 0; 
+  background-image: linear-gradient(to right, #F8F8F8 20%, #FFFFFF 70%);
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .subtitles {
+    margin-bottom: 24px;
+  }
+}
+.brands-title__text{
+  color: #7E7E82;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
+.brands-content{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0; /*gap: 16px 16px ;*/
+}
+
+@media (min-width: 768px) {
+  .brands-content {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    height: 163px;
+    overflow-y: hidden;
+  }
+}
+@media (min-width: 1120px) {
+  .brands-content {
+    gap: 16px 32px;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 105px;
+}
+.swiper-pagination{
+  bottom: 0!important;
+  left: -30px!important;
+}
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+.swiper-pagination-bullet {
+  width: 12px!important;
+  height: 12px!important;
+  text-align: center;
+  background-color: #DDDDDD!important;
+}
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #B5B6BC!important;
+}
+.swiper-slide{
+  height: 72px!important;
+  width: 206px!important;
+}
+@media (min-width: 768px) {
+  .swiper-slide{
+    margin: 0!important;
+    width: 224px!important;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-slide{
+    width: 240px!important;
+  }
+}
+.brands-content__item{
+  display: flex!important;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.brands-content__item-link{
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  background-image: url('assets/images/brands-logo/brand-button.svg');
+  transition: background-color 0.7s;
+}
+.brands-content__btn{
+  display: none;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .brands-content__btn{
+    display: flex;
+  }
+}
+.icon-rotate{
+  transform: rotate(180deg);
 }
