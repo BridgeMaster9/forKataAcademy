@@ -1,6 +1,6 @@
 
 //------ инициализация свайпера
-var swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   spaceBetween: 16,
   pagination: {
@@ -12,9 +12,9 @@ var swiper = new Swiper(".swiper", {
   },
 });
 //------ при width screen>768 - remove swiper
-var mediaQuery = window.matchMedia('(min-width: 768px)');
-var brandContainer = document.querySelector('.brands-container');
-var brandsContent = document.querySelector('.brands-content')
+let mediaQuery = window.matchMedia('(min-width: 768px)');
+let brandContainer = document.querySelector('.brands-container');
+let brandsContent = document.querySelector('.brands-content')
 
 function HandleMediaQuery(e){
   if(mediaQuery.matches){
@@ -31,9 +31,9 @@ mediaQuery.addListener(HandleMediaQuery)
 HandleMediaQuery(mediaQuery)
 
 //------------ brands-content - кнопка 'показать все'
-var brandsButton = document.querySelector('.brands-content__btn')
-var brandsButtonText = brandsButton.querySelector('.next-button__text')
-var brandsButtonIcon = brandsButton.querySelector('.next-button__icon')
+let brandsButton = document.querySelector('.brands-content__btn')
+let brandsButtonText = brandsButton.querySelector('.next-button__text')
+let brandsButtonIcon = brandsButton.querySelector('.next-button__icon')
 
 brandsButton.addEventListener('click', function(){
   if(brandsButtonText.textContent === 'Показать все'){
